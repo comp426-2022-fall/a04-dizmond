@@ -21,7 +21,7 @@ app.get('/app/roll/', (req, res) => {
 });
 
 app.post('/app/roll', (req, res, next) => {
-    const json_file = roll(sides, parseInt(req.body.dice), parseInt(req.body.rolls));
+    const json_file = roll(parseInt(req.body.sides), parseInt(req.body.dice), parseInt(req.body.rolls));
     res.status(200).send(json_file);
 });
 
