@@ -8,7 +8,9 @@ const port = args.port || 5000;
 
 /*default api endpoint that returns 404 NOT FOUND for
 endpoints that aren't defined */
-
+app.get('/', (req, res) => {
+    res.status(404).send('404 NOT FOUND');
+});
 
 // endpoint at '/app' should return 200 OK
 app.get('/app', (req, res) => {
